@@ -4,7 +4,7 @@
   left: 0;
   width: 17rem;
   height: 100%;
-  background: rgba(88, 91, 231, 0.733);
+  background: white;
   box-shadow: 2px 2px 50px rgb(98, 109, 109);
   overflow: scroll;
   h2 {
@@ -21,7 +21,7 @@
     width: 30%;
   }
   &:hover {
-    background: rgb(173, 177, 179);
+    background: rgb(86, 86, 87);
   }
 }
 .song-description {
@@ -38,6 +38,7 @@
   scrollbar-width: thin;
   scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 }
+
 *::-webkit-scrollbar {
   width: 5px;
 }

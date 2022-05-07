@@ -16,6 +16,7 @@ function chillHop() {
             name: "Glow",
             cover: "https://chillhop.com/wp-content/uploads/2022/03/efb56e836d82d26e857b341a951f0337ace66b8b-1024x1024.jpg",
             artist: "Tesk",
+            id: uuidv4(),
             active: false,
             color: ['#BA4A46', '#FDF0DD'],
             audio: "<https://mp3.chillhop.com/serve.php/?mp3=32888"

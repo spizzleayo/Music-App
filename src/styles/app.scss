@@ -8,6 +8,14 @@ h2,
 h3 {
   color: rgb(58, 57, 57);
 }
+body {
+  font-family: "Roboto", sans-serif;
+}
+h3,
+h4 {
+  font-weight: 400;
+  color: rgba(0, 174, 255, 0.801);
+}
 
 @import "./song";
 @import "./player";
