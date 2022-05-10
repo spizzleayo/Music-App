@@ -1,4 +1,4 @@
-import React, {useState, useRef, useSyncExternalStore} from "react";
+import React, {useState, useRef} from "react";
 //import styles
 import './styles/app.scss'
 //addin components
@@ -7,7 +7,7 @@ import Song from './components/Song';
 import Library from "./components/Library";
 import Nav from "./components/Nav";
 //import util
-import data from './util';
+import data from "./util";
 
 function App() {
   //Ref
@@ -26,8 +26,13 @@ const timeUpdateHandler = (e) => {
   const duration = e.target.duration;
   setSongInfo({...songInfo, currentTime: current, duration})
 };
+const songEndHandler = async () => {
+  let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+  await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+    if(isPlaying) audioRef.current.play();
+  };
   return (
-    <div className="App">
+    <div className={`App ${libraryStatus ? 'library-active' : ""}`}>
       <Nav libraryStatus={libraryStatus} 
        setLibraryStatus={setLibraryStatus} />
         <Song currentSong={currentSong} />
@@ -52,8 +57,8 @@ const timeUpdateHandler = (e) => {
           onTimeUpdate={timeUpdateHandler} 
           onLoadedMetadata={timeUpdateHandler}
           ref={audioRef} 
-          src={currentSong.audio}>
-
+          src={currentSong.audio}
+          onEnded={songEndHandler}>
           </audio>
     </div>
   );
