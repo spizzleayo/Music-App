@@ -11,6 +11,18 @@ function chillHop() {
           color: ['#BA4A46', '#FDF0DD'],
           audio: "https://mp3.chillhop.com/serve.php/?mp3=32854"
         },
+
+        {
+          name: "Blue Moment",
+          cover: "https://chillhop.com/wp-content/uploads/2022/04/7e2c880b50c6647e59330b1c371101ce2950625f-1024x1024.jpg",
+          artist: "Sugi.wa, Tom Ford",
+          id: uuidv4(),
+          active: false,
+          color: ['#BA4A46', '#FDF0DD'],
+          audio: "https://mp3.chillhop.com/serve.php/?mp3=32978"
+        },
+
+
         
         {
             name: "Glow",
@@ -22,16 +34,7 @@ function chillHop() {
             audio: "<https://mp3.chillhop.com/serve.php/?mp3=32888"
           },
 
-          {
-            name: "Blue Moment",
-            cover: "https://chillhop.com/wp-content/uploads/2022/04/7e2c880b50c6647e59330b1c371101ce2950625f-1024x1024.jpg",
-            artist: "Sugi.wa, Tom Ford",
-            id: uuidv4(),
-            active: false,
-            color: ['#BA4A46', '#FDF0DD'],
-            audio: "https://mp3.chillhop.com/serve.php/?mp3=32978"
-          },
-
+          
     ];
 }
 
