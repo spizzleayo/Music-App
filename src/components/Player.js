@@ -8,7 +8,16 @@ import {
      } from "@fortawesome/free-solid-svg-icons";
 
 
-    const Player = ({audioRef, setSongs, songs, setCurrentSong, currentSong, isPlaying, setIsPlaying, setSongInfo, songInfo }) => {
+    const Player = ({
+        audioRef, 
+        setSongs, 
+        songs, 
+        setCurrentSong, 
+        currentSong, 
+        isPlaying, 
+        setIsPlaying, 
+        setSongInfo, 
+        songInfo }) => {
     
      const activeLibraryHandler  = (nextPrev) => {
        const newSongs = songs.map((song) => {
@@ -20,7 +29,7 @@ import {
            }else{
                return{
                    ...song,
-                   active: false,
+                   active:false,
                }
            }
        });
@@ -58,7 +67,7 @@ import {
            await setCurrentSong(songs[songs.length - 1]);
            activeLibraryHandler(songs[songs.length - 1]);
            if(isPlaying) audioRef.current.play();
-            return;   
+            return;    
            }
        await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
        activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
