@@ -3,9 +3,9 @@ import { v4 as uuidv4 } from "uuid";
 function chillHop() {
     return [
         {
-          name: "Mission",
-          cover: "https://chillhop.com/wp-content/uploads/2022/03/b11c1508b5ddceec6a3eb89040eb6977fd861632-1024x1024.jpg",
-          artist: "Tom Daye",
+          name: "Timelapses",
+          cover: "https://chillhop.com/wp-content/uploads/2022/03/7a886841c0f684c40ae9a6d1abd0c30f72269977-1024x1024.jpg",
+          artist: "Kissamile",
           id: uuidv4(),
           active: true,
           color: ['#BA4A46', '#FDF0DD'],
@@ -35,7 +35,7 @@ function chillHop() {
           },
 
           {
-            name: "Blue Bay",
+            name: "Blue",
             cover: "https://chillhop.com/wp-content/uploads/2022/04/7e2c880b50c6647e59330b1c371101ce2950625f-1024x1024.jpg",
             artist: "Tom Ford",
             id: uuidv4(),
