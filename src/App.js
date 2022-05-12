@@ -29,7 +29,7 @@ const timeUpdateHandler = (e) => {
 const songEndHandler = async () => {
   let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
   await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-   // if(isPlaying) audioRef.current.play(); 
+    if(isPlaying) audioRef.current.play(); 
     
 };
   
